@@ -4,7 +4,7 @@ import numpy as np
 import pickle
 
 # Load the model
-with open ("Specialization/house_pricing.pkl", "rb") as file:
+with open ("house_pricing.pkl", "rb") as file:
     final_model=pickle.load(file)
 
 # Streamlit UI
@@ -13,10 +13,10 @@ st.write("This app predicts the Price of a House")
 st.write("Please input the following parameters:")
 
 # Input 
-br=st.number_input('Number of Bedrooms')
-bth=st.number_input('Numer of Bathrooms')
-tilt=st.number_input('Number of Toilets')
-ps=st.number_input('Number of Packing Space')
+br=st.number_input('Number of Bedrooms. Between 1-5')
+bth=st.number_input('Numer of Bathrooms. Between 1-5')
+tilt=st.number_input('Number of Toilets. Between 1-5')
+ps=st.number_input('Number of Packing Space. Between 1-5')
 db=st.selectbox("Is it a Detached Bongalo 0 for No and 1 for Yes:", [0, 1])
 dd=st.selectbox("Is it a Detached Duplex 0 and No and 1 for Yes:", [0, 1])
 
