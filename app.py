@@ -23,4 +23,4 @@ dd=st.selectbox("Is it a Detached Duplex 0 and No and 1 for Yes:", [0, 1])
 if st.button("Predict"):
     user_input=np.array([[br,bth,tilt,ps,db,dd]])
     prediction=final_model.predict(user_input)
-    st.write(f"From the Input you Gave The Price of The House is Predicted {prediction[0]}")
+    st.write(f"From the Input you Gave The Price of The House is Predicted {round(prediction[0])} Naira.")
